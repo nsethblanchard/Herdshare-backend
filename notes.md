@@ -7,8 +7,8 @@ has_many :products through :carts dependent destroy
 
 Cart (join-ish)- total
 belongs_to :customer
-has and belongs to many: products
+has_many :products, through :customers
 
 Product, name, type, price
 belongs_to :farmer
-has and belongs to many: carts
+has_many :carts, through :customers
